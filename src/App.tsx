@@ -5,7 +5,7 @@ import MainPage from './components/pages/main-page';
 const App: FC = () => (
   <Routes>
     <Switch>
-      <Route path="/atomic-design" component={MainPage} exact />
+      <Route path="/" component={MainPage} />
     </Switch>
   </Routes>
   );
