@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/atomic-design/static/css/main.b9270bc3.chunk.css",
-    "main.js": "/atomic-design/static/js/main.70c8fd27.chunk.js",
-    "main.js.map": "/atomic-design/static/js/main.70c8fd27.chunk.js.map",
+    "main.css": "/atomic-design/static/css/main.beb0bc87.chunk.css",
+    "main.js": "/atomic-design/static/js/main.55f441c3.chunk.js",
+    "main.js.map": "/atomic-design/static/js/main.55f441c3.chunk.js.map",
     "runtime-main.js": "/atomic-design/static/js/runtime-main.df96c2e6.js",
     "runtime-main.js.map": "/atomic-design/static/js/runtime-main.df96c2e6.js.map",
     "static/js/2.adcd6f19.chunk.js": "/atomic-design/static/js/2.adcd6f19.chunk.js",
     "static/js/2.adcd6f19.chunk.js.map": "/atomic-design/static/js/2.adcd6f19.chunk.js.map",
     "index.html": "/atomic-design/index.html",
-    "static/css/main.b9270bc3.chunk.css.map": "/atomic-design/static/css/main.b9270bc3.chunk.css.map",
+    "static/css/main.beb0bc87.chunk.css.map": "/atomic-design/static/css/main.beb0bc87.chunk.css.map",
     "static/js/2.adcd6f19.chunk.js.LICENSE.txt": "/atomic-design/static/js/2.adcd6f19.chunk.js.LICENSE.txt",
     "static/media/Rectangle 2.5879d043.png": "/atomic-design/static/media/Rectangle 2.5879d043.png"
   },
   "entrypoints": [
     "static/js/runtime-main.df96c2e6.js",
     "static/js/2.adcd6f19.chunk.js",
-    "static/css/main.b9270bc3.chunk.css",
-    "static/js/main.70c8fd27.chunk.js"
+    "static/css/main.beb0bc87.chunk.css",
+    "static/js/main.55f441c3.chunk.js"
   ]
 }
