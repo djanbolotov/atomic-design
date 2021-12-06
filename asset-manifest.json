@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/atomic-design/static/css/main.beb0bc87.chunk.css",
-    "main.js": "/atomic-design/static/js/main.55f441c3.chunk.js",
-    "main.js.map": "/atomic-design/static/js/main.55f441c3.chunk.js.map",
+    "main.js": "/atomic-design/static/js/main.dc217f15.chunk.js",
+    "main.js.map": "/atomic-design/static/js/main.dc217f15.chunk.js.map",
     "runtime-main.js": "/atomic-design/static/js/runtime-main.df96c2e6.js",
     "runtime-main.js.map": "/atomic-design/static/js/runtime-main.df96c2e6.js.map",
     "static/js/2.adcd6f19.chunk.js": "/atomic-design/static/js/2.adcd6f19.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.df96c2e6.js",
     "static/js/2.adcd6f19.chunk.js",
     "static/css/main.beb0bc87.chunk.css",
-    "static/js/main.55f441c3.chunk.js"
+    "static/js/main.dc217f15.chunk.js"
   ]
 }
