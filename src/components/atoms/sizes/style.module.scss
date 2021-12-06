@@ -1,0 +1,29 @@
+@import '../../../scss/utils/variables';
+@import '../../../scss/utils/mixins';
+
+.button {
+	@include reset-button;
+	@include text-style-t3();
+	background-color: $color-V0-2;
+  padding: rem(calc(((var(--subline-rem) - 1))));
+  border: rem(1) solid $color-V0-2;
+	border-radius: var(--border-radius);
+
+	&:hover {
+		border-color: #616068;
+	}
+}
+
+.selected {
+	background: $color-G0;
+  padding: rem(calc((var(--subline-rem) + 2)));
+  border: none;
+}
+
+.disabled {
+  pointer-events: none;
+  background: rgba(19, 17, 29, 0.98);
+  padding: rem(calc((var(--subline-rem) + 2)));
+  border: none;
+  color: #403E48;
+}

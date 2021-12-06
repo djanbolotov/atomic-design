@@ -1,0 +1,348 @@
+b,
+em,
+i,
+small,
+strong,
+sub,
+sup,
+ins,
+del,
+mark,
+code,
+kbd,
+samp,
+var,
+pre,
+abbr,
+bdo,
+q,
+cite,
+blockquote,
+dfn,
+br,
+hr,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li,
+ul,
+div,
+wbr {
+  -webkit-font-smoothing: antialiased;
+  color: var(--color-W0);
+}
+
+
+// Title H1, H2, H3, H4, H5, H6
+
+.extra-title-h1 {
+  @include extra-title-h1();
+}
+
+.extra-title-h2 {
+  @include extra-title-h2();
+}
+.extra-title-h3 {
+  @include extra-title-h3();
+}
+.extra-title-h4 {
+  @include extra-title-h4();
+}
+.extra-title-h5 {
+  @include extra-title-h5();
+}
+
+.extra-title-h1-vw {
+  @include extra-title-h1-vw();
+}
+.extra-title-h3-vw {
+  @include extra-title-h3-vw();
+}
+.title-main-page {
+  @include text-style-t4-bold-vw();
+}
+
+// DISPLAY TEXT
+.text-style-t1 {
+  @include text-style-t1();
+}
+.text-style-t2 {
+  @include text-style-t2();
+}
+.text-style-t3 {
+  @include text-style-t3();
+}
+.text-style-t4 {
+  @include text-style-t4();
+}
+.text-view-all {
+  position: relative;
+  z-index: 1;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: rem(12);
+  line-height: rem(15);
+  text-decoration: none;
+  color: var(--color-D6);
+  transition: color 0.4s $time-cubic-bezier;
+
+  &:hover {
+    color: var(--color-A1-a);
+  }
+}
+
+// CUSTOM TEXT DECORATION
+.bold {
+  font-weight: bold;
+}
+
+// Title for px - exemples names classes .title-h1 / .title-h2
+@each $name, $value in $heading-font-sizes-px {
+  .title-#{$name} {
+    font-size: #{$value};
+  }
+}
+
+// Title for vw - exemples names classes .title-h1-vw / .title-h2-vw
+@each $name, $value in $heading-font-sizes-vw {
+  .title-#{$name} {
+    font-size: #{$value};
+  }
+}
+
+// Title for rem - exemples names classes .title-h1 / .title-h1
+@each $name, $value in $heading-font-sizes-rem {
+  .title-#{$name} {
+    font-size: #{$value};
+  }
+}
+
+
+// Displays for vw - exemples names classes .display-1 / .display-2
+@each $name, $value in $display-font-sizes {
+  .display-#{$name} {
+    font-size: #{$value};
+  }
+}
+
+// Displays for vw - exemples names classes .display-1-vw / .display-2-vw
+@each $name, $value in $display-font-sizes-vw {
+  .display-#{$name} {
+    font-size: #{$value};
+  }
+}
+
+
+// margin-left - exemples ml-1 / ml-2
+@each $name, $value in $margin-left-rem {
+  .ml-#{$name} {
+    margin-left: rem(#{$value});
+  }
+}
+
+// margin-left-vw - exemples ml-1-vw / ml-2-vw
+@each $name, $value in $margin-left-vw {
+  .ml-#{$name} {
+    margin-left: vw(#{$value}) !important;
+
+    @include mmax($pad) {
+      margin-left: rem(#{$value}) !important;
+    }
+  }
+}
+
+// margin-left-vw - exemples ml-1-vw / ml-2-vw
+@each $name, $value in $margin-left-vw {
+  .mr-#{$name} {
+    margin-right: vw(#{$value}) !important;
+
+    @include mmax($pad) {
+      margin-right: rem(#{$value}) !important;
+    }
+  }
+}
+
+// margin-bottom-vw - exemples mb-1-vw / mb-2-vw
+@each $name, $value in $margin-bottom-vw {
+  .mb-#{$name} {
+    margin-bottom: vw(#{$value}) !important;
+
+    @include mmax($pad) {
+      margin-bottom: rem(#{$value}) !important;
+    }
+  }
+}
+
+// margin-bottom- - exemples mb-1 / mb-2
+@each $name, $value in $margin-bottom {
+  .mb-#{$name} {
+    margin-bottom: rem(#{$value}) !important;
+  }
+}
+
+// padding-left-right-vw - exemples px-1-vw / px-2-vw
+@each $name, $value in $margin-bottom-vw {
+  .px-#{$name} {
+    padding-left: vw(#{$value}) !important;
+    padding-right: vw(#{$value}) !important;
+
+    @include mmax($pad) {
+      padding-left: rem(#{$value}) !important;
+      padding-right: rem(#{$value}) !important;
+    }
+  }
+}
+
+// padding-bottom-vw - exemples pb-1-vw / pb-2-vw
+@each $name, $value in $margin-bottom-vw {
+  .pb-#{$name} {
+    padding-bottom: vw(#{$value}) !important;
+
+    @include mmax($pad) {
+      padding-bottom: rem(#{$value}) !important;
+    }
+  }
+}
+
+
+/*
+ w-1 = 100%
+ w-2 = 75%
+ w-3 = 50%
+ w-4 = 33.333%
+ w-5 = 25%
+ w-6 = 16.6%
+ w-7 = 14.2%
+ w-8 = 12.2%
+ w-9 = 11.1%
+ */
+@each $name, $value in $widths {
+  .w-#{$name} {
+    width: #{$value} !important;
+  }
+}
+
+
+// colors - examples .c-D4...
+.c {
+  &-D4 {
+    color: var(--color-D4);
+  }
+
+  &-D5 {
+    color: var(--color-D5);
+  }
+
+  &-D7 {
+    color: var(--color-D7);
+  }
+
+  &-D9 {
+    color: var(--color-D9);
+  }
+}
+
+// GRID
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.jc {
+  &_end {
+    justify-content: flex-end;
+  }
+
+  &_start {
+    justify-content: flex-start;
+  }
+}
+
+.al {
+  &-stretch {
+    align-items: stretch;
+  }
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+// Height
+.h {
+  &-auto {
+    height: auto !important;
+  }
+}
+
+// Hidden / Visible
+.hidden {
+  overflow: hidden;
+
+  &-x {
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+}
+
+.line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--color-D3);
+}
+
+// position
+.p-relative {
+  position: relative;
+}
+
+// mobile / Desctop
+.mobile {
+  @include mmax($laptop) {
+    &-overflow-text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* number of lines to show */
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      height: rem(40);
+    }
+  }
+
+  @include mmax($pad) {
+    &-hidden {
+      display: none !important;
+    }
+  }
+}
+
+.desctop {
+  @media (min-width: $pad + 'px') {
+    &-hidden {
+      display: none !important;
+    }
+  }
+}
+
+// Media query
+
+@include mmax($pad) {
+  .px-2-big-vw {
+    padding: 0 20px !important;
+  }
+}

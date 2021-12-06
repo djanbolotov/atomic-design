@@ -1,0 +1,364 @@
+/*********************************/
+/*     Variables-DARK            */
+/*===============================*/
+
+// Functions
+@function em($prop) {
+  @return $prop + em;
+}
+
+@function rem($pixels, $root: $fz-root) {
+  @return calc((#{$pixels} / #{$root} * 1rem));
+}
+
+@function vw($font) {
+  $vw-context: $xl * 0.01 * 1;
+  @return calc(#{$font} / #{$vw-context} * 1vw);
+}
+
+// lines
+$subline: 5px;
+$subline-rem: 5;
+$baseline: $subline * 5;
+$baseline-rem: 25;
+
+// Color
+/* colors */
+$color-D0: rgba(15, 12, 38, 1);
+$color-D1: rgba(20, 17, 42, 1);
+$color-D1-tint-a: rgba(15, 12, 38, 0.98);
+$color-D2: rgba(37, 34, 58, 1);
+$color-D2-tint-a: rgba(15, 12, 38, 0.91);
+$color-D3: rgba(61, 58, 79, 1);
+$color-D3-tint-a: rgba(15, 12, 38, 0.81);
+$color-D4: rgba(94, 92, 110, 1);
+$color-D4-tint-a: rgba(15, 12, 38, 0.67);
+$color-D5: rgba(130, 129, 142, 1);
+$color-D5-tint-a: rgba(15, 12, 38, 0.52);
+$color-D6: rgba(169, 168, 177, 1);
+$color-D6-tint-a: rgba(15, 12, 38, 0.36);
+$color-D7: rgba(202, 202, 207, 1);
+$color-D7-tint-a: rgba(15, 12, 38, 0.22);
+$color-D8: rgba(231, 231, 233, 1);
+$color-D8-tint-a: rgba(15, 12, 38, 0.1);
+$color-D9: rgba(248, 248, 248, 1);
+$color-D9-tint-a: rgba(15, 12, 38, 0.03);
+$color-D0-1: rgba(8, 7, 21, 1);
+$color-D0-2: rgba(2, 2, 5, 1);
+$color-A1-a: rgba(255, 255, 255, 0.97);
+$color-A2-a: rgba(255, 255, 255, 0.9);
+$color-A3-a: rgba(255, 255, 255, 0.79);
+$color-A4-a: rgba(255, 255, 255, 0.64);
+$color-A5-a: rgba(255, 255, 255, 0.49);
+$color-A6-a: rgba(255, 255, 255, 0.33);
+$color-A7-a: rgba(255, 255, 255, 0.2);
+$color-A8-a: rgba(255, 255, 255, 0.09);
+$color-A9-a: rgba(255, 255, 255, 0.02);
+$color-P0: rgba(211, 51, 249, 1);
+$color-P1: rgba(219, 88, 250, 1);
+$color-P1-tint-a: rgba(211, 51, 249, 0.82);
+$color-P2: rgba(225, 116, 251, 1);
+$color-P2-tint-a: rgba(211, 51, 249, 0.68);
+$color-P3: rgba(230, 141, 252, 1);
+$color-P3-tint-a: rgba(211, 51, 249, 0.56);
+$color-P4: rgba(236, 165, 252, 1);
+$color-P4-tint-a: rgba(211, 51, 249, 0.44);
+$color-P5: rgba(240, 186, 253, 1);
+$color-P5-tint-a: rgba(211, 51, 249, 0.34);
+$color-P6: rgba(244, 204, 254, 1);
+$color-P6-tint-a: rgba(211, 51, 249, 0.25);
+$color-P7: rgba(248, 222, 254, 1);
+$color-P7-tint-a: rgba(211, 51, 249, 0.16);
+$color-P8: rgba(251, 237, 254, 1);
+$color-P8-tint-a: rgba(211, 51, 249, 0.09);
+$color-P9: rgba(254, 249, 255, 1);
+$color-P9-tint-a: rgba(211, 51, 249, 0.03);
+$color-P0-1: rgba(122, 30, 144, 1);
+$color-P0-2: rgba(72, 17, 85, 1);
+$color-R0: rgba(249, 67, 126, 1);
+$color-R1: rgba(250, 95, 145, 1);
+$color-R1-tint-a: rgba(249, 67, 126, 0.85);
+$color-R2: rgba(251, 116, 160, 1);
+$color-R2-tint-a: rgba(249, 67, 126, 0.74);
+$color-R3: rgba(251, 133, 171, 1);
+$color-R3-tint-a: rgba(249, 67, 126, 0.65);
+$color-R4: rgba(251, 144, 179, 1);
+$color-R4-tint-a: rgba(249, 67, 126, 0.59);
+$color-R5: rgba(252, 153, 185, 1);
+$color-R5-tint-a: rgba(249, 67, 126, 0.54);
+$color-R6: rgba(252, 165, 193, 1);
+$color-R6-tint-a: rgba(249, 67, 126, 0.48);
+$color-R7: rgba(253, 178, 202, 1);
+$color-R7-tint-a: rgba(249, 67, 126, 0.41);
+$color-R8: rgba(253, 197, 215, 1);
+$color-R8-tint-a: rgba(249, 67, 126, 0.31);
+$color-R9: rgba(254, 221, 232, 1);
+$color-R9-tint-a: rgba(249, 67, 126, 0.18);
+$color-R0-1: rgba(144, 39, 73, 1);
+$color-R0-2: rgba(85, 23, 43, 1);
+$color-V0: rgba(125, 101, 233, 1);
+$color-V1: rgba(145, 124, 236, 1);
+$color-V1-tint-a: rgba(125, 101, 233, 0.85);
+$color-V2: rgba(159, 141, 239, 1);
+$color-V2-tint-a: rgba(125, 101, 233, 0.74);
+$color-V3: rgba(171, 155, 241, 1);
+$color-V3-tint-a: rgba(125, 101, 233, 0.65);
+$color-V4: rgba(178, 164, 242, 1);
+$color-V4-tint-a: rgba(125, 101, 233, 0.59);
+$color-V5: rgba(185, 172, 243, 1);
+$color-V5-tint-a: rgba(125, 101, 233, 0.54);
+$color-V6: rgba(193, 181, 244, 1);
+$color-V6-tint-a: rgba(125, 101, 233, 0.48);
+$color-V7: rgba(202, 192, 246, 1);
+$color-V7-tint-a: rgba(125, 101, 233, 0.41);
+$color-V8: rgba(215, 207, 248, 1);
+$color-V8-tint-a: rgba(125, 101, 233, 0.31);
+$color-V9: rgba(232, 227, 251, 1);
+$color-V9-tint-a: rgba(125, 101, 233, 0.18);
+$color-V0-1: rgba(73, 59, 135, 1);
+$color-V0-2: rgba(43, 34, 79, 1);
+$color-B0: rgba(90, 190, 252, 1);
+$color-B1: rgba(115, 200, 252, 1);
+$color-B1-tint-a: rgba(90, 190, 252, 0.85);
+$color-B2: rgba(133, 207, 253, 1);
+$color-B2-tint-a: rgba(90, 190, 252, 0.74);
+$color-B3: rgba(148, 213, 253, 1);
+$color-B3-tint-a: rgba(90, 190, 252, 0.65);
+$color-B4: rgba(158, 217, 253, 1);
+$color-B4-tint-a: rgba(90, 190, 252, 0.59);
+$color-B5: rgba(166, 220, 253, 1);
+$color-B5-tint-a: rgba(90, 190, 252, 0.54);
+$color-B6: rgba(176, 224, 254, 1);
+$color-B6-tint-a: rgba(90, 190, 252, 0.48);
+$color-B7: rgba(187, 228, 254, 1);
+$color-B7-tint-a: rgba(90, 190, 252, 0.41);
+$color-B8: rgba(204, 235, 254, 1);
+$color-B8-tint-a: rgba(90, 190, 252, 0.31);
+$color-B9: rgba(225, 243, 254, 1);
+$color-B9-tint-a: rgba(90, 190, 252, 0.18);
+$color-B0-1: rgba(52, 110, 146, 1);
+$color-B0-2: rgba(31, 65, 86, 1);
+$color-F0: rgba(53, 164, 64, 1);
+$color-F1: rgba(83, 178, 93, 1);
+$color-F1-tint-a: rgba(53, 164, 64, 0.85);
+$color-F2: rgba(106, 188, 114, 1);
+$color-F2-tint-a: rgba(53, 164, 64, 0.74);
+$color-F3: rgba(124, 196, 131, 1);
+$color-F3-tint-a: rgba(53, 164, 64, 0.65);
+$color-F4: rgba(136, 201, 142, 1);
+$color-F4-tint-a: rgba(53, 164, 64, 0.59);
+$color-F5: rgba(146, 206, 152, 1);
+$color-F5-tint-a: rgba(53, 164, 64, 0.54);
+$color-F6: rgba(158, 211, 163, 1);
+$color-F6-tint-a: rgba(53, 164, 64, 0.48);
+$color-F7: rgba(172, 218, 177, 1);
+$color-F7-tint-a: rgba(53, 164, 64, 0.41);
+$color-F8: rgba(192, 227, 196, 1);
+$color-F8-tint-a: rgba(53, 164, 64, 0.31);
+$color-F9: rgba(219, 239, 221, 1);
+$color-F9-tint-a: rgba(53, 164, 64, 0.18);
+$color-F0-1: rgba(31, 95, 37, 1);
+$color-F0-2: rgba(18, 56, 22, 1);
+$color-L0: rgba(99, 243, 122, 1);
+$color-L1: rgba(122, 245, 142, 1);
+$color-L1-tint-a: rgba(99, 243, 122, 0.85);
+$color-L2: rgba(140, 246, 157, 1);
+$color-L2-tint-a: rgba(99, 243, 122, 0.74);
+$color-L3: rgba(154, 247, 169, 1);
+$color-L3-tint-a: rgba(99, 243, 122, 0.65);
+$color-L4: rgba(163, 248, 177, 1);
+$color-L4-tint-a: rgba(99, 243, 122, 0.59);
+$color-L5: rgba(171, 249, 183, 1);
+$color-L5-tint-a: rgba(99, 243, 122, 0.54);
+$color-L6: rgba(180, 249, 191, 1);
+$color-L6-tint-a: rgba(99, 243, 122, 0.48);
+$color-L7: rgba(191, 250, 200, 1);
+$color-L7-tint-a: rgba(99, 243, 122, 0.41);
+$color-L8: rgba(207, 251, 214, 1);
+$color-L8-tint-a: rgba(99, 243, 122, 0.31);
+$color-L9: rgba(227, 253, 231, 1);
+$color-L9-tint-a: rgba(99, 243, 122, 0.18);
+$color-L0-1: rgba(57, 141, 71, 1);
+$color-L0-2: rgba(34, 83, 41, 1);
+$color-W0: rgba(255, 255, 255, 1);
+$color-G0: linear-gradient(60deg, rgba(211, 51, 249, 1) 0%, rgba(249, 67, 126, 1) 100%);
+$color-G1: linear-gradient(90deg, rgba(125, 101, 233, 1) 0%, rgba(90, 190, 252, 1) 100%);
+$color-G2: linear-gradient(90deg, rgba(53, 164, 64, 1) 0%, rgba(99, 243, 122, 1) 100%);
+$color-G3: linear-gradient(90deg, rgba(53, 164, 64, 1) 0%, rgba(99, 243, 122, 1) 100%);
+$color-E0: rgba(237, 42, 84, 1);
+$color-E1: rgba(57, 182, 59, 1);
+$bg-body: #292929;
+$bg-body-light: #fff;
+
+// Blur
+$blur: blur(30px);
+$bgBlue: linear-gradient(230.13deg, rgba(33, 43, 60, 0.7) 2.57%, rgba(6, 7, 8, 0.7) 75.46%);
+
+// Font base
+$font-size-base: 16px;
+$fz-root: 16;
+
+$font-family: 'Montserrat', sans-serif;
+$font-family-f1: 'Montserrat', sans-serif;
+
+// Break points
+$retina: '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)';
+$phone: 375;
+$pad: 768;
+$laptop: 1024;
+$xl: 1379;
+$desktop: 1920;
+$break-0-start: $pad + px;
+$break-0-end: 0px;
+$break-1-start: 9999px;
+$break-1-end: $pad + 1px;
+
+
+$heading-font-sizes-rem: (
+        'h1': rem(42),
+        'h2': rem(36),
+        'h3': rem(30),
+        'h4': rem(24),
+        'h5': rem(18),
+        'h6': rem(16),
+);
+
+$heading-font-sizes-px: (
+        'h1-px': 42px,
+        'h2-px': 36px,
+        'h3-px': 30px,
+        'h4-px': 24px,
+        'h5-px': 18px,
+        'h6-px': 16px,
+);
+
+$heading-font-sizes-vw: (
+        'h1-vw': vw(60),
+        'h2-vw': vw(36),
+        'h3-vw': vw(30),
+        'h4-vw': vw(24),
+        'h5-vw': vw(18),
+        'h6-vw': vw(16),
+);
+
+
+
+
+$display-font-sizes: (
+        '1': rem(var(--font-size-1-rem)),
+        '2': rem(var(--font-size0-rem)),
+        '3': rem(var(--font-size01-rem)),
+        '4': rem(var(--font-size1-rem)),
+);
+
+$display-font-sizes-vw: (
+        '1-vw': vw(var(--font-size-1-rem)),
+        '2-vw': vw(var(--font-size0-rem)),
+        '3-vw': vw(var(--font-size01-rem)),
+        '4-vw': vw(var(--font-size1-rem)),
+);
+
+$margin-left-rem: (
+        '1-rem': var(--subline-rem),
+        '2-rem': calc(var(--subline-rem) * 2),
+        '3-rem': calc(var(--subline-rem) * 3),
+        '4-rem': calc(var(--subline-rem) * 4),
+        '5-rem': calc(var(--subline-rem) * 5),
+);
+
+$margin-left-vw: (
+        '1-vw': var(--subline-rem),
+        '2-vw': calc(var(--subline-rem) * 2),
+        '3-vw': calc(var(--subline-rem) * 3),
+        '4-vw': calc(var(--subline-rem) * 4),
+        '5-vw': calc(var(--subline-rem) * 5),
+        '6-vw': calc(var(--subline-rem) * 6),
+        '7-vw': calc(var(--subline-rem) * 7),
+        '8-vw': calc(var(--subline-rem) * 8),
+);
+
+$margin-bottom-vw: (
+        '1-vw': var(--subline-rem),
+        '2-vw': calc(var(--subline-rem) * 2),
+        '3-vw': calc(var(--subline-rem) * 3),
+        '4-vw': calc(var(--subline-rem) * 4),
+        '5-vw': calc(var(--subline-rem) * 5),
+        '6-vw': calc(var(--subline-rem) * 6),
+        '1-big-vw': var(--baseline-rem),
+        '2-big-vw': calc(var(--subline-rem) * 11),
+);
+
+$margin-bottom: (
+        '1': var(--subline-rem),
+        '2': calc(var(--subline-rem) * 2),
+        '3': calc(var(--subline-rem) * 3),
+        '4': calc(var(--subline-rem) * 4),
+        '5': calc(var(--subline-rem) * 5),
+        '6': calc(var(--subline-rem) * 6),
+        '1-big': var(--baseline-rem),
+        '2-big': calc(var(--subline-rem) * 11),
+);
+
+$widths: (
+        '1': 100%,
+        '2': calc((100% / 1.4) - 2.5px),
+        '3': calc((100% / 2) - 2.5px),
+        '4': calc(100% / 3),
+        '5': calc(100% / 4),
+        '6': calc(100% / 5),
+        '7': calc(100% / 6),
+        '8': calc(100% / 7),
+        '9': calc(100% / 8),
+);
+
+// Border radius
+$radiusMini: 4px;
+$radius: 6px;
+$radiusBig: 12px;
+
+/* grid */
+$baseline: 25px;
+$subline: 5px;
+$gutter: 20px;
+$column1: 65px;
+$column2: 150px;
+$column3: 235px;
+$column4: 320px;
+$column5: 405px;
+$column6: 490px;
+$column7: 575px;
+$column8: 660px;
+$column9: 745px;
+$column10: 830px;
+$column11: 915px;
+$column12: 1000px;
+
+/* fonts */
+$font-size-1: 14px;
+$font-size-2: 12px;
+$font-size-3: 10px;
+$font-size0: 16px;
+$font-size1: 20px;
+$font-size2: 26px;
+$font-size3: 34px;
+$font-size3-2: 32px;
+$font-size4: 45px;
+$font-size5: 60px;
+$font-size6: 79px;
+$font-size7: 99px;
+$font-size8: 113px;
+$font-size9: 123px;
+
+$font-size-1-rem: 14;
+$font-size-2-rem: 12;
+$font-size-3-rem: 10;
+$font-size1-rem: 20;
+$line-height1-rem: 30;
+// Time
+$time-fast: 300ms;
+$time-cubic-bezier: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+// Timing functions
+$timing-functions: (
+        'easeInOutCubic': cubic-bezier(0.645, 0.045, 0.355, 1),
+);

@@ -1,0 +1,23 @@
+@import '../../../scss/utils/variables';
+@import '../../../scss/utils/mixins';
+
+.main {
+	@include reset-button;
+  width: rem(var(--baseline-rem));
+  height: rem(var(--baseline-rem));
+  border-radius: 100%;
+}
+
+.selected {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    width: rem(calc(var(--baseline-rem) + 5));
+    height: rem(calc(var(--baseline-rem) + 5));
+    border: rem(2) solid #fff;
+    border-radius: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,37 @@
+@import '../../../scss/utils/variables';
+@import '../../../scss/utils/mixins';
+
+.wrapper {
+  @include ib;
+	position: relative;
+	&:hover {
+		& div:first-child {
+      opacity: 1;
+		}
+	}
+}
+
+.tip {
+  opacity: 0;
+  transition: .3s all;
+	position: absolute;
+	font-size: rem(12);
+  background: $color-D3;
+  left: 50%;
+  transform: translateX(-50%);
+  top: rem(-25);
+  padding: rem(2) rem(8);
+	border-radius: var(--border-radius);
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0; 
+    height: 0; 
+    border-left: rem($subline-rem) solid transparent;
+    border-right: rem($subline-rem) solid transparent;
+    border-top: rem($subline-rem) solid $color-D3;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: rem(-$subline-rem);
+  }
+}
