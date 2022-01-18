@@ -1,3 +1,5 @@
+You can visit deployed verison of this project with this link: https://djanbolotov16.github.io/atomic-design/
+
 # Правила
 
 1) Использовать архитектуру Atomic Design
